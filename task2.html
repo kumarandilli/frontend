@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emoji Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-container h2 {
+            margin: 0;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 8px 30px 8px 10px; /* Right padding for the icon */
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        .search-box::after {
+            content: "🔍";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li:hover::before {
+            margin-right: 10px;
+        }
+
+        .smile:hover::before {
+            content: "🔍";
+        }
+
+        .heart:hover::before {
+            content: " 🚙";
+        }
+
+        .crying:hover::before {
+            content: "🤸🏻‍♂️";
+        }
+
+        li {
+            font-size: 1.2rem;
+            margin: 12px 0;
+            padding: 10px;
+            background-color: rgb(161, 133, 149);
+            border-radius: 10px;
+            width: fit-content;
+            transition: transform 0.3s ease;
+        }
+
+        li:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-container">
+        <h2>List of icon</h2>
+        <div class="search-box">
+            <input type="text" placeholder="Search here...">
+        </div>
+    </div>
+
+    <ul>
+        <li class="smile">icon 1</li>
+        <li class="heart">icon 2</li>
+        <li class="crying">icon 3</li>
+    </ul>
+
+</body>
+</html>
